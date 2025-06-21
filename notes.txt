@@ -18,3 +18,13 @@ this i am going to change it to Lessons Learn Log.
 
 Starting the project
 2. getting the user to beable to interact and getting the user to enter a input with the input() function
+
+2.1 user enters something but then it will disappear to be gone has no way to
+    save data
+        variable = input() the variable is like a box
+        print and input are label as functions
+        inside these functions are known as arguments
+        can have 0 or more arguments
+        functions can return a value
+        text in python are strings
+        can store strings in variables in project i have a example of both
