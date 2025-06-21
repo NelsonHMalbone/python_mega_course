@@ -1,0 +1,19 @@
+Project Name: Lesson Learn Tracker
+
+project started on 06-21-2025
+project finished on TBD
+
+1. so using chatgpt used it to make suggests of project ideas that are simular to a TO-DO List
+some examples are Lesson Learn Log, Values and Alignment Tracker, Coping Skills and Self_reflaction
+prompts
+
+1.2 Following along with the Udemy Course Python Mega Course Module 1 is a To-Do list instead of doing
+this i am going to change it to Lessons Learn Log.
+
+1.3 How does this work:
+    User will beable to add lessons learned from experiences
+    User will beable to view all lessons
+    Along with edit and delete as user understand and evolves
+
+Starting the project
+2. getting the user to beable to interact and getting the user to enter a input with the input() function
