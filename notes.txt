@@ -28,3 +28,16 @@ Starting the project
         functions can return a value
         text in python are strings
         can store strings in variables in project i have a example of both
+
+2.2
+    Date 06-22-2025
+    continuing getting user input
+    with having varibles with a message is good and bad
+        good because if you want to edit you can go there in change it, improves readablity of code
+        bad adds more lines of code to project and more for computer to run
+
+2.2.1
+    storing users input in a list
+    [] is a python list
+    print(type(variable)) shows the user the class of variable
+    type() is consider a function in requires a argument
