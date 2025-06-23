@@ -55,3 +55,18 @@ section 2
 
     1.1 going to work on getting user input repeatedly
         using batch operation
+
+            user1_input = input()
+            user2_input = input()
+            user3_input = input()
+            not a setstainable way of getting multiple inputs.
+
+            best way is using a while loop
+                while 2 > 1 basic beginner way
+                while is a function
+                2 > 1 is a condition
+                checking to s is 2 is greater then 1
+                a True statement
+
+                but the correct way is using
+                while True:
