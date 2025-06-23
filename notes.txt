@@ -17,27 +17,41 @@ this i am going to change it to Lessons Learn Log.
     Along with edit and delete as user understand and evolves
 
 Starting the project
-2. getting the user to beable to interact and getting the user to enter a input with the input() function
+Section 1
+    2. getting the user to beable to interact and getting the user to enter a input with the input() function
 
-2.1 user enters something but then it will disappear to be gone has no way to
-    save data
-        variable = input() the variable is like a box
-        print and input are label as functions
-        inside these functions are known as arguments
-        can have 0 or more arguments
-        functions can return a value
-        text in python are strings
-        can store strings in variables in project i have a example of both
+    2.1 user enters something but then it will disappear to be gone has no way to
+        save data
+            variable = input() the variable is like a box
+            print and input are label as functions
+            inside these functions are known as arguments
+            can have 0 or more arguments
+            functions can return a value
+            text in python are strings
+            can store strings in variables in project i have a example of both
 
-2.2
-    Date 06-22-2025
-    continuing getting user input
-    with having varibles with a message is good and bad
-        good because if you want to edit you can go there in change it, improves readablity of code
-        bad adds more lines of code to project and more for computer to run
+    2.2
+        Date 06-22-2025
+        continuing getting user input
+        with having varibles with a message is good and bad
+            good because if you want to edit you can go there in change it, improves readablity of code
+            bad adds more lines of code to project and more for computer to run
 
-2.2.1
-    storing users input in a list
-    [] is a python list
-    print(type(variable)) shows the user the class of variable
-    type() is consider a function in requires a argument
+    2.2.1
+        storing users input in a list
+        [] is a python list
+        print(type(variable)) shows the user the class of variable
+        type() is consider a function in requires a argument
+
+    2.3
+        bonus example have a user enter a book title in getting the length of title.
+        but we are going to do game titles instead
+
+        first we build it then watch the vod. added a few f statements and a title() method to capitalize title.
+        this was a simple appilication to make nothing to complex.
+
+section 2
+    1. starting section 2 of the course
+
+    1.1 going to work on getting user input repeatedly
+        using batch operation
