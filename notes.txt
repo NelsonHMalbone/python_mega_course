@@ -70,3 +70,21 @@ section 2
 
                 but the correct way is using
                 while True:
+
+    1.2 today working on getting a list together so that the program keeps the
+    data we enter.
+
+        with list = [] above the while loop for main list
+        we then append list to a agrument
+            list.append(input)
+            append is a method
+            method are attached to data types
+
+        bonus example 2
+        checking to see if a user enters a password correctly
+        we used a != (not equal) condition on the same line as while loop to compare what the user enters in what was hard coded
+        just continues to ask user to input a password till its the correct one
+
+        in bonus 2.1 what to produce a series of numbers as output
+        x = x + 1
+        x gets overwritten till the value is = to 6
