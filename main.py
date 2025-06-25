@@ -9,4 +9,5 @@ lesson_list = []
 while True:
     user_text = input(prompt_user_text)
     # optional_note = input("Add a quick note (optional): ")
-    lesson_list.append(user_text)
+    lesson_list.append(user_text.capitalize())
+    print(lesson_list)

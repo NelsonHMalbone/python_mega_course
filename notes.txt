@@ -88,3 +88,15 @@ section 2
         in bonus 2.1 what to produce a series of numbers as output
         x = x + 1
         x gets overwritten till the value is = to 6
+
+        finshed section 2 starting section 3
+
+Section 3
+    1: start of section 3
+
+    1.1 we are taking the input from the user and appending it to the empty list
+        and capitalizing the first letter with the capitalization method and then printing
+        out the list to see whats inside the list
+
+    1.2 we are now going to add a step in have the user to beable to choose from add or exit the program
+
