@@ -99,4 +99,10 @@ Section 3
         out the list to see whats inside the list
 
     1.2 we are now going to add a step in have the user to beable to choose from add or exit the program
+        using the match case statement
+        how we do that first
+            1: need to ask the user a question?
+                   would you like to add, show, exit
+        then you would do a case for each add, show and exit
+        after that would do the logic for each case statement
 

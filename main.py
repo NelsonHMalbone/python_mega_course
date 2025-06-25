@@ -1,13 +1,22 @@
 print("Lessons Learn Tracker")
-
-#print("Enter your lesson Learned:")
+# Prompts for project
 prompt_user_text = "Enter your lesson Learned: " # variable to store message
+prompt_user_text1 = "Would you like to add, show, exit (select one):  "
 
 # list method
 lesson_list = []
 
 while True:
-    user_text = input(prompt_user_text)
-    # optional_note = input("Add a quick note (optional): ")
-    lesson_list.append(user_text.capitalize())
-    print(lesson_list)
+    user_decision = input(prompt_user_text1)
+    match user_decision:
+        case "add":
+            user_text = input(prompt_user_text)
+            # optional_note = input("Add a quick note (optional): ")
+            lesson_list.append(user_text.capitalize())
+
+        case "show":
+            print(lesson_list)
+
+        case "exit":
+            print("Goodbye")
+            break
