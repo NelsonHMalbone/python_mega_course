@@ -118,3 +118,6 @@ Section 3
     bonus example bonus3.py while looops run till the condition is true
     for loops run till the list is done
     for loops are treated as sequences of objects
+    finshed up this section
+
+section 4
