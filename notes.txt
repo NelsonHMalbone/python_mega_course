@@ -112,3 +112,5 @@ Section 3
                 print(item)
     if user is wanting to add a new lesson but does this "add " it will error so
     on the user decision input you add .strip() method and it strips the whitespace
+    using the capitalize() menthod we place that show the first letter would be capitalize if user
+    did not do so

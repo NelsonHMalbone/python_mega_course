@@ -17,6 +17,7 @@ while True:
 
         case "show":
             for item in lesson_list:
+                item = item.capitalize()
                 print(item)
 
         case "exit":
