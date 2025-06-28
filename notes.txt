@@ -114,3 +114,7 @@ Section 3
     on the user decision input you add .strip() method and it strips the whitespace
     using the capitalize() menthod we place that show the first letter would be capitalize if user
     did not do so
+
+    bonus example bonus3.py while looops run till the condition is true
+    for loops run till the list is done
+    for loops are treated as sequences of objects
