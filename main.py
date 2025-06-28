@@ -7,7 +7,8 @@ prompt_user_text1 = "Would you like to add, show, exit (select one):  "
 lesson_list = []
 
 while True:
-    user_decision = input(prompt_user_text1)
+    user_decision = input(prompt_user_text1).strip()
+    user_decision = user_decision.strip()
     match user_decision:
         case "add":
             user_text = input(prompt_user_text)
@@ -15,7 +16,8 @@ while True:
             lesson_list.append(user_text.capitalize())
 
         case "show":
-            print(lesson_list)
+            for item in lesson_list:
+                print(item)
 
         case "exit":
             print("Goodbye")
