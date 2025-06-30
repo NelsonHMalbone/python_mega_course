@@ -1,7 +1,7 @@
 print("Lessons Learn Tracker")
 # Prompts for project
 prompt_user_text = "Enter your lesson Learned: " # variable to store message
-prompt_user_text1 = "Would you like to add, show, exit (select one):  "
+prompt_user_text1 = "Would you like to add, show, edit, exit (select one):  "
 
 # list method
 lesson_list = []
@@ -20,6 +20,9 @@ while True:
                 item = item.capitalize()
                 print(item)
 
-        case "exit"|"e":
+        case "edit"|"e":
+            break
+
+        case "exit"|"x":
             print("Goodbye")
             break
