@@ -121,3 +121,8 @@ Section 3
     finshed up this section
 
 section 4
+    1.1 working with list indexing and tuples
+
+    1.2
+        adding a edit key to beable to edit but first we need to add a number to
+        the list of options to beable to choose from.

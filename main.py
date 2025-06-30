@@ -10,16 +10,16 @@ while True:
     user_decision = input(prompt_user_text1).strip()
     user_decision = user_decision.strip()
     match user_decision:
-        case "add":
+        case "add"|"a":
             user_text = input(prompt_user_text)
             # optional_note = input("Add a quick note (optional): ")
             lesson_list.append(user_text.capitalize())
 
-        case "show":
+        case "show"|"s":
             for item in lesson_list:
                 item = item.capitalize()
                 print(item)
 
-        case "exit":
+        case "exit"|"e":
             print("Goodbye")
             break
