@@ -126,3 +126,4 @@ section 4
     1.2
         adding a edit key to beable to edit but first we need to add a number to
         the list of options to beable to choose from.
+        please look at the notion for updates and notes
