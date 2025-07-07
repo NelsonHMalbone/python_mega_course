@@ -21,7 +21,11 @@ while True:
                 print(item)
 
         case "edit"|"e":
-            break
+            number = int(input("number of lesson to edit: "))
+            number = number - 1
+            new_lesson = input("Enter a new lesson: ")
+            lesson_list[number] = new_lesson
+
 
         case "exit"|"x":
             print("Goodbye")
