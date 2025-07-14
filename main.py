@@ -16,9 +16,8 @@ while True:
             lesson_list.append(user_text.capitalize())
 
         case "show"|"s":
-            for item in lesson_list:
-                item = item.capitalize()
-                print(item)
+            for index, item in enumerate(lesson_list):
+                print(f'{index}:{item}')
 
         case "edit"|"e":
             number = int(input("number of lesson to edit: "))
