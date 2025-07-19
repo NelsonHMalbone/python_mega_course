@@ -28,7 +28,7 @@ while True:
 
         case "complete":
             number = int(input("number of lesson to that are completed: "))
-            removed = lesson_list.pop(number - 1) # removes the number selected
+            removed = lesson_list.pop(number - 1) # removes the number selected 
             print(f'out of lesson list {removed} was removed')
 
         case "exit"|"x":
