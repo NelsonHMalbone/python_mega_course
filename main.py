@@ -17,7 +17,7 @@ while True:
             # equalivant to wrieline but just reading
             lesson_list = file.readlines() # list was created here
             # need to close file so different code cant affect file
-            file.close()
+            file.close() # just a safety
             # optional_note = input("Add a quick note (optional): ")
             lesson_list.append(user_text.capitalize())
             file = open('lesson_learn.txt','w')
