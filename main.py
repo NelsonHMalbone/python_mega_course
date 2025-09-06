@@ -15,7 +15,7 @@ while True:
             # read file to bebale to see the in console
             file = open('lesson_learn.txt', 'r')
             # equalivant to wrieline but just reading
-            lesson_list = file.readlines()
+            lesson_list = file.readlines() # list was created here
             # need to close file so different code cant affect file
             file.close()
             # optional_note = input("Add a quick note (optional): ")
