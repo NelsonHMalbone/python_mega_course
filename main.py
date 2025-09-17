@@ -24,7 +24,18 @@ while True:
             file.writelines(lesson_list)
             file.close()
         case "show"|"s":
-            for index, item in enumerate(lesson_list):
+            file = open("lesson_learn.txt", "r")
+            lessons = file.readlines()
+            file.close()
+
+            new_lesson_list = []
+
+            for item in lessons:
+                lessons_new = item.strip("\n")
+                new_lesson_list.append(lessons_new)
+
+
+            for index, item in enumerate(new_lesson_list):
                 row = f'{index + 1}:{item}' # starts list at 1
                 print(row)
 
