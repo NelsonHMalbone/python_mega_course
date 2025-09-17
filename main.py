@@ -34,8 +34,12 @@ while True:
                 lessons_new = item.strip("\n")
                 new_lesson_list.append(lessons_new)
 
+            # lsit comperhension way
+            # new_lesson_list = [item.strip("\n") for item in lessons]
 
             for index, item in enumerate(new_lesson_list):
+                # direct method
+                #item = item.strip("\n")
                 row = f'{index + 1}:{item}' # starts list at 1
                 print(row)
 
