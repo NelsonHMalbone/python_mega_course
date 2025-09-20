@@ -34,7 +34,7 @@ while True:
                 lessons_new = item.strip("\n")
                 new_lesson_list.append(lessons_new)
 
-            # lsit comperhension way
+            # list comparison  way
             # new_lesson_list = [item.strip("\n") for item in lessons]
 
             for index, item in enumerate(new_lesson_list):
