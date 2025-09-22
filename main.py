@@ -41,14 +41,22 @@ while True:
             for index, item in enumerate(new_lesson_list):
                 # direct method
                 #item = item.strip("\n")
-                row = f'{index + 1}:{item}' # starts list at 1
+                row = f'{index + 1}: {item}' # starts list at 1
                 print(row)
 
         case "edit"|"e":
             number = int(input("number of lesson to edit: "))
             number = number - 1
+
+            with open('lesson_learn.txt', 'r') as file:
+                # equal to writeline but just reading
+                lesson_list = file.readlines() # list was created here
+
             new_lesson = input("Enter a new lesson: ")
-            lesson_list[number] = new_lesson
+            lesson_list[number] = new_lesson + '\n'
+
+            with open('lesson_learn.txt','w') as file:
+                file.writelines(lesson_list)
 
         case "complete":
             number = int(input("number of lesson to that are completed: "))
