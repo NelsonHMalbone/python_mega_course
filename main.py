@@ -60,8 +60,17 @@ while True:
 
         case "complete":
             number = int(input("number of lesson to that are completed: "))
+
+            # getting current list
+            with open('lesson_learn.txt', 'r') as file:
+                # equal to writeline but just reading
+                lesson_list = file.readlines() # list was created here
+
+            lesson_to_remove = lesson_list[number - 1]
             removed = lesson_list.pop(number - 1) # removes the number selected
-            print(f'out of lesson list {removed} was removed')
+            with open('lesson_learn.txt','w') as file:
+                file.writelines(lesson_list)
+            print(f'out of lesson list {lesson_to_remove} was removed')
 
         case "exit"|"x":
             print("Goodbye")
