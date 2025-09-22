@@ -66,7 +66,7 @@ while True:
                 # equal to writeline but just reading
                 lesson_list = file.readlines() # list was created here
 
-            lesson_to_remove = lesson_list[number - 1]
+            lesson_to_remove = lesson_list[number - 1].strip("\n")
             removed = lesson_list.pop(number - 1) # removes the number selected
             with open('lesson_learn.txt','w') as file:
                 file.writelines(lesson_list)
