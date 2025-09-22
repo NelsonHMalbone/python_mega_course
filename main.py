@@ -25,9 +25,9 @@ while True:
                 file.writelines(lesson_list)
 
         case "show"|"s":
-            file = open("lesson_learn.txt", "r")
-            lessons = file.readlines()
-            file.close()
+            with open("lesson_learn.txt", "r") as file:
+                lessons = file.readlines()
+
 
             new_lesson_list = []
 
