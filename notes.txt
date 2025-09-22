@@ -131,3 +131,15 @@ section 4
 Its 9-21-2025 getting back into working on this course i stopped taking notes
 on here in using a 5 folder/tabbed notebook wanna start putting notes back
 on here also for but i am a writer also.
+
+Section 8
+section is improving the way to read files we go from this
+            # read file to beale to see the in console
+            file = open('lesson_learn.txt', 'r')
+            # equal to writeline but just reading
+            lesson_list = file.readlines() # list was created here
+            # need to close file so different code cant affect file
+            file.close() # just a safety
+       to this
+        with open('file.txt' as r) as file:
+            lesson_list = file.readlines()
