@@ -21,9 +21,9 @@ while True:
 
             # optional_note = input( Add a quick note (optional): )
             lesson_list.append(user_text.capitalize())
-            file = open('lesson_learn.txt','w')
-            file.writelines(lesson_list)
-            file.close()
+            with open('lesson_learn.txt','w') as file:
+                file.writelines(lesson_list)
+
         case "show"|"s":
             file = open("lesson_learn.txt", "r")
             lessons = file.readlines()

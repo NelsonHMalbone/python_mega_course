@@ -143,3 +143,7 @@ section is improving the way to read files we go from this
        to this
         with open('file.txt' as r) as file:
             lesson_list = file.readlines()
+
+        can do the same to write to files also
+        with open('file.txt', w) as file:
+            file.writelines(list)
