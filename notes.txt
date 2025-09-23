@@ -147,3 +147,7 @@ section is improving the way to read files we go from this
         can do the same to write to files also
         with open('file.txt', w) as file:
             file.writelines(list)
+
+section 8 bonus example is a daily journal
+requirements: Date, rate mood 1-10, Let the thoughts flow
+will go into a folder, and file saved by the date of entry
