@@ -9,69 +9,69 @@ prompt_user_text1 = "Would you like to add, show, edit, complete, exit (select o
 while True:
     user_decision = input(prompt_user_text1).strip()
     user_decision = user_decision.strip()
-    match user_decision:
-        case "add"|"a":
-            user_text = input(prompt_user_text) + '\n'
 
-            with open('lesson_learn.txt', 'r') as file:
-                # equal to writeline but just reading
-                lesson_list = file.readlines() # list was created here
+    if "add" in user_decision:
+        user_text = input(prompt_user_text) + '\n'
 
-
-
-            # optional_note = input( Add a quick note (optional): )
-            lesson_list.append(user_text.capitalize())
-            with open('lesson_learn.txt','w') as file:
-                file.writelines(lesson_list)
-
-        case "show"|"s":
-            with open("lesson_learn.txt", "r") as file:
-                lessons = file.readlines()
+        with open('lesson_learn.txt', 'r') as file:
+            # equal to writeline but just reading
+            lesson_list = file.readlines() # list was created here
 
 
-            new_lesson_list = []
 
-            for item in lessons:
-                lessons_new = item.strip("\n")
-                new_lesson_list.append(lessons_new)
+        # optional_note = input( Add a quick note (optional): )
+        lesson_list.append(user_text.capitalize())
+        with open('lesson_learn.txt','w') as file:
+            file.writelines(lesson_list)
 
-            # list comprehensions  way
-            # new_lesson_list = [item.strip("\n") for item in lessons]
+    if "show" in user_decision:
+        with open("lesson_learn.txt", "r") as file:
+            lessons = file.readlines()
 
-            for index, item in enumerate(new_lesson_list):
-                # direct method
-                #item = item.strip("\n")
-                row = f'{index + 1}: {item}' # starts list at 1
-                print(row)
 
-        case "edit"|"e":
-            number = int(input("number of lesson to edit: "))
-            number = number - 1
+        new_lesson_list = []
 
-            with open('lesson_learn.txt', 'r') as file:
-                # equal to writeline but just reading
-                lesson_list = file.readlines() # list was created here
+        for item in lessons:
+            lessons_new = item.strip("\n")
+            new_lesson_list.append(lessons_new)
 
-            new_lesson = input("Enter a new lesson: ")
-            lesson_list[number] = new_lesson + '\n'
+        # list comprehensions  way
+        # new_lesson_list = [item.strip("\n") for item in lessons]
 
-            with open('lesson_learn.txt','w') as file:
-                file.writelines(lesson_list)
+        for index, item in enumerate(new_lesson_list):
+            # direct method
+            #item = item.strip("\n")
+            row = f'{index + 1}: {item}' # starts list at 1
+            print(row)
 
-        case "complete":
-            number = int(input("number of lesson to that are completed: "))
+    if "edit" in user_decision:
+        number = int(input("number of lesson to edit: "))
+        number = number - 1
 
-            # getting current list
-            with open('lesson_learn.txt', 'r') as file:
-                # equal to writeline but just reading
-                lesson_list = file.readlines() # list was created here
+        with open('lesson_learn.txt', 'r') as file:
+            # equal to writeline but just reading
+            lesson_list = file.readlines() # list was created here
 
-            lesson_to_remove = lesson_list[number - 1].strip("\n")
-            removed = lesson_list.pop(number - 1) # removes the number selected
-            with open('lesson_learn.txt','w') as file:
-                file.writelines(lesson_list)
-            print(f'out of lesson list {lesson_to_remove} was removed')
+        new_lesson = input("Enter a new lesson: ")
+        lesson_list[number] = new_lesson + '\n'
 
-        case "exit"|"x":
-            print("Goodbye")
-            break
+        with open('lesson_learn.txt','w') as file:
+            file.writelines(lesson_list)
+
+    if "complete" in user_decision:
+        number = int(input("number of lesson to that are completed: "))
+
+        # getting current list
+        with open('lesson_learn.txt', 'r') as file:
+            # equal to writeline but just reading
+            lesson_list = file.readlines() # list was created here
+
+        lesson_to_remove = lesson_list[number - 1].strip("\n")
+        removed = lesson_list.pop(number - 1) # removes the number selected
+        with open('lesson_learn.txt','w') as file:
+            file.writelines(lesson_list)
+        print(f'out of lesson list {lesson_to_remove} was removed')
+
+    if "exit" in user_decision:
+        print("Goodbye")
+        break
