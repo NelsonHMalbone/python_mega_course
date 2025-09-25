@@ -11,7 +11,7 @@ while True:
     user_decision = user_decision.strip()
 
     if "add" in user_decision:
-        user_text = input(prompt_user_text) + '\n'
+        user_text = user_decision[4:]
 
         with open('lesson_learn.txt', 'r') as file:
             # equal to writeline but just reading
