@@ -1,5 +1,8 @@
 Project Name: Lesson Learn Tracker
 
+this is the first project of the udemy course which is just going over
+the usage of python and leartning the functions and methods
+
 project started on 06-21-2025
 project finished on TBD
 
