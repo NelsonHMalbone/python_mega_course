@@ -24,7 +24,7 @@ while True:
         with open('lesson_learn.txt','w') as file:
             file.writelines(lesson_list)
 
-    if "show" in user_decision:
+    elif "show" in user_decision:
         with open("lesson_learn.txt", "r") as file:
             lessons = file.readlines()
 
@@ -44,8 +44,9 @@ while True:
             row = f'{index + 1}: {item}' # starts list at 1
             print(row)
 
-    if "edit" in user_decision:
-        number = int(input("number of lesson to edit: "))
+    elif "edit" in user_decision:
+        # making it so the user just has to do edit 1 or 2 or whatever number
+        number = int(user_decision[4:])
         number = number - 1
 
         with open('lesson_learn.txt', 'r') as file:
@@ -58,8 +59,8 @@ while True:
         with open('lesson_learn.txt','w') as file:
             file.writelines(lesson_list)
 
-    if "complete" in user_decision:
-        number = int(input("number of lesson to that are completed: "))
+    elif "complete" in user_decision:
+        number = int(user_decision[8:])
 
         # getting current list
         with open('lesson_learn.txt', 'r') as file:
@@ -70,8 +71,11 @@ while True:
         removed = lesson_list.pop(number - 1) # removes the number selected
         with open('lesson_learn.txt','w') as file:
             file.writelines(lesson_list)
-        print(f'out of lesson list {lesson_to_remove} was removed')
+        print(f'out of lesson list: {lesson_to_remove} was removed')
 
-    if "exit" in user_decision:
-        print("Goodbye")
+    elif "exit" in user_decision:
         break
+
+    else:
+        print("command not a valid")
+print("Goodbye")
