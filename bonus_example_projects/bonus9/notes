@@ -1,0 +1,39 @@
+this is section 9 bonus example
+building a program to check the strength of a password
+using just a list
+password_input = input("Enter new password: ")
+
+# result list for password
+result = []
+
+# checking against conditions
+# chars 8 or greater
+
+if len(password_input) >= 8:
+    result.append(True)
+else:
+    result.append(False)
+
+# checking if number is in string
+digit = False
+for i in password_input:
+    if i.isdigit():
+        digit = True
+
+result.append(digit)
+
+# checking to see if there is a uppercase char
+upper_char = False
+for x in password_input:
+    if x.isupper():
+        upper_char = True
+
+result.append(upper_char)
+
+# getting the strong or weak password
+# using all function
+
+if all(result):
+    print("Strong Password")
+else:
+    print("Weak password")
