@@ -63,19 +63,25 @@ while True:
             continue
 
     elif user_decision.startswith("complete"):
-        number = int(user_decision[8:])
+        try:
+            try:
+                number = int(user_decision[8:])
 
-        # getting current list
-        with open('lesson_learn.txt', 'r') as file:
-            # equal to writeline but just reading
-            lesson_list = file.readlines() # list was created here
+                # getting current list
+                with open('lesson_learn.txt', 'r') as file:
+                    # equal to writeline but just reading
+                    lesson_list = file.readlines() # list was created here
 
-        lesson_to_remove = lesson_list[number - 1].strip("\n")
-        removed = lesson_list.pop(number - 1) # removes the number selected
-        with open('lesson_learn.txt','w') as file:
-            file.writelines(lesson_list)
-        print(f'out of lesson list: {lesson_to_remove} was removed')
-
+                lesson_to_remove = lesson_list[number - 1].strip("\n")
+                removed = lesson_list.pop(number - 1) # removes the number selected
+                with open('lesson_learn.txt','w') as file:
+                    file.writelines(lesson_list)
+                print(f'out of lesson list: {lesson_to_remove} was removed')
+            except ValueError:
+                print("please use a number to select which item to edit (ex: complete 1)")
+                continue
+        except IndexError:
+            print("Out of range")
     elif "exit" in user_decision:
         break
 
