@@ -82,6 +82,7 @@ while True:
                 continue
         except IndexError:
             print("Out of range")
+            continue
     elif "exit" in user_decision:
         break
 
