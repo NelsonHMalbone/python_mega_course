@@ -60,6 +60,7 @@ while True:
                 file.writelines(lesson_list)
         except ValueError:
             print("please use a number to select which item to edit (ex: edit 1)")
+            continue
 
     elif user_decision.startswith("complete"):
         number = int(user_decision[8:])
