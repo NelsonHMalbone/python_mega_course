@@ -17,10 +17,9 @@ while True:
             # equal to writeline but just reading
             lesson_list = file.readlines() # list was created here
 
-
-
         # optional_note = input( Add a quick note (optional): )
-        lesson_list.append(user_text.capitalize())
+        lesson_list.append(user_text + '\n')
+
         with open('lesson_learn.txt','w') as file:
             file.writelines(lesson_list)
 
