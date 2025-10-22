@@ -6,6 +6,13 @@ prompt_user_text1 = "Would you like to add, show, edit, complete, exit (select o
 # list method
 #lesson_list = {} # don't need this because we are reading file now
 
+def get_lesson():
+    with open('lesson_learn.txt', 'r') as file_local:
+        # equal to writeline but just reading
+        lesson_list_local = file_local.readlines()  # list was created here
+    return lesson_list_local
+
+
 while True:
     user_decision = input(prompt_user_text1).strip()
     user_decision = user_decision.strip()
@@ -13,9 +20,7 @@ while True:
     if user_decision.startswith("add"):
         user_text = user_decision[4:]
 
-        with open('lesson_learn.txt', 'r') as file:
-            # equal to writeline but just reading
-            lesson_list = file.readlines() # list was created here
+        lesson_list = get_lesson()
 
         # optional_note = input( Add a quick note (optional): )
         lesson_list.append(user_text + '\n')
@@ -24,22 +29,14 @@ while True:
             file.writelines(lesson_list)
 
     elif user_decision.startswith("show"):
-        with open("lesson_learn.txt", "r") as file:
-            lessons = file.readlines()
-
-
-        new_lesson_list = []
-
-        for item in lessons:
-            lessons_new = item.strip("\n")
-            new_lesson_list.append(lessons_new)
+        lesson_list = get_lesson()
 
         # list comprehensions  way
         # new_lesson_list = [item.strip("\n") for item in lessons]
 
-        for index, item in enumerate(new_lesson_list):
+        for index, item in enumerate(lesson_list):
             # direct method
-            #item = item.strip("\n")
+            item = item.strip("\n")
             row = f'{index + 1}: {item}' # starts list at 1
             print(row)
 
