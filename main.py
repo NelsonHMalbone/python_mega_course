@@ -6,12 +6,19 @@ prompt_user_text1 = "Would you like to add, show, edit, complete, exit (select o
 # list method
 #lesson_list = {} # don't need this because we are reading file now
 
-def get_lesson():
-    with open('lesson_learn.txt', 'r') as file_local:
+# to read files
+# when calling this function will need a variable because it returns something
+def get_lesson(filepath):# willl use the filepath that is show in add,show, and edit
+    with open(filepath, 'r') as file_local:
         # equal to writeline but just reading
         lesson_list_local = file_local.readlines()  # list was created here
     return lesson_list_local
 
+# to write to files
+# does not need a variable to be called unlike the get lesson
+def write_lesson(filepath, lesson_arg):
+    with open(filepath, 'w') as file_local:
+        file_local.writelines(lesson_arg)
 
 while True:
     user_decision = input(prompt_user_text1).strip()
@@ -20,16 +27,15 @@ while True:
     if user_decision.startswith("add"):
         user_text = user_decision[4:]
 
-        lesson_list = get_lesson()
+        lesson_list = get_lesson('lesson_learn.txt')
 
         # optional_note = input( Add a quick note (optional): )
         lesson_list.append(user_text + '\n')
 
-        with open('lesson_learn.txt','w') as file:
-            file.writelines(lesson_list)
+        write_lesson('lesson_learn.txt', lesson_list)
 
     elif user_decision.startswith("show"):
-        lesson_list = get_lesson()
+        lesson_list = get_lesson('lesson_learn.txt')
 
         # list comprehensions  way
         # new_lesson_list = [item.strip("\n") for item in lessons]
@@ -46,15 +52,12 @@ while True:
             number = int(user_decision[4:])
             number = number - 1
 
-            with open('lesson_learn.txt', 'r') as file:
-                # equal to writeline but just reading
-                lesson_list = file.readlines() # list was created here
+            lesson_list = get_lesson('lesson_learn.txt')
 
             new_lesson = input("Enter a new lesson: ")
             lesson_list[number] = new_lesson + '\n'
 
-            with open('lesson_learn.txt','w') as file:
-                file.writelines(lesson_list)
+            write_lesson('lesson_learn.txt', lesson_list)
         except ValueError:
             print("please use a number to select which item to edit (ex: edit 1)")
             continue
@@ -64,22 +67,21 @@ while True:
             try:
                 number = int(user_decision[8:])
 
-                # getting current list
-                with open('lesson_learn.txt', 'r') as file:
-                    # equal to writeline but just reading
-                    lesson_list = file.readlines() # list was created here
+                lesson_list = get_lesson('lesson_learn.txt')
 
                 lesson_to_remove = lesson_list[number - 1].strip("\n")
                 removed = lesson_list.pop(number - 1) # removes the number selected
-                with open('lesson_learn.txt','w') as file:
-                    file.writelines(lesson_list)
+                write_lesson('lesson_learn.txt', lesson_list)
                 print(f'out of lesson list: {lesson_to_remove} was removed')
+
             except ValueError:
                 print("please use a number to select which item to edit (ex: complete 1)")
                 continue
+
         except IndexError:
             print("Out of range")
             continue
+
     elif "exit" in user_decision:
         break
 

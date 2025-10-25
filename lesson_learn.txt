@@ -7,3 +7,4 @@ just place a upper
 new lesson
 new lesson
 new lesson
+just a new function to write to file
