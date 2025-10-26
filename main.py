@@ -16,7 +16,7 @@ def get_lesson(filepath="lesson_learn.txt"):# willl use the filepath that is sho
 
 # to write to files
 # does not need a variable to be called unlike the get lesson
-def write_lesson(filepath, lesson_arg):
+def write_lesson(lesson_arg, filepath="lesson_learn.txt"):
     with open(filepath, 'w') as file_local:
         file_local.writelines(lesson_arg)
 
@@ -32,7 +32,7 @@ while True:
         # optional_note = input( Add a quick note (optional): )
         lesson_list.append(user_text + '\n')
 
-        write_lesson('lesson_learn.txt', lesson_list)
+        write_lesson(lesson_list)
 
     elif user_decision.startswith("show"):
         lesson_list = get_lesson()
@@ -57,7 +57,7 @@ while True:
             new_lesson = input("Enter a new lesson: ")
             lesson_list[number] = new_lesson + '\n'
 
-            write_lesson('lesson_learn.txt', lesson_list)
+            write_lesson(lesson_list)
         except ValueError:
             print("please use a number to select which item to edit (ex: edit 1)")
             continue
@@ -71,7 +71,7 @@ while True:
 
                 lesson_to_remove = lesson_list[number - 1].strip("\n")
                 removed = lesson_list.pop(number - 1) # removes the number selected
-                write_lesson('lesson_learn.txt', lesson_list)
+                write_lesson(lesson_list)
                 print(f'out of lesson list: {lesson_to_remove} was removed')
 
             except ValueError:
