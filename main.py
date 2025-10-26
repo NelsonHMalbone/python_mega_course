@@ -21,6 +21,7 @@ def get_lesson(filepath="lesson_learn.txt"):
 # to write to files
 # does not need a variable to be called unlike the get lesson
 def write_lesson(lesson_arg, filepath="lesson_learn.txt"):
+    """write a lesson item list in the text file"""
     with open(filepath, 'w') as file_local:
         file_local.writelines(lesson_arg)
 
