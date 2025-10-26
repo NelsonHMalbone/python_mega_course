@@ -8,7 +8,7 @@ prompt_user_text1 = "Would you like to add, show, edit, complete, exit (select o
 
 # to read files
 # when calling this function will need a variable because it returns something
-def get_lesson(filepath):# willl use the filepath that is show in add,show, and edit
+def get_lesson(filepath="lesson_learn.txt"):# willl use the filepath that is show in add,show, and edit
     with open(filepath, 'r') as file_local:
         # equal to writeline but just reading
         lesson_list_local = file_local.readlines()  # list was created here
@@ -27,7 +27,7 @@ while True:
     if user_decision.startswith("add"):
         user_text = user_decision[4:]
 
-        lesson_list = get_lesson('lesson_learn.txt')
+        lesson_list = get_lesson()
 
         # optional_note = input( Add a quick note (optional): )
         lesson_list.append(user_text + '\n')
@@ -35,7 +35,7 @@ while True:
         write_lesson('lesson_learn.txt', lesson_list)
 
     elif user_decision.startswith("show"):
-        lesson_list = get_lesson('lesson_learn.txt')
+        lesson_list = get_lesson()
 
         # list comprehensions  way
         # new_lesson_list = [item.strip("\n") for item in lessons]
@@ -52,7 +52,7 @@ while True:
             number = int(user_decision[4:])
             number = number - 1
 
-            lesson_list = get_lesson('lesson_learn.txt')
+            lesson_list = get_lesson()
 
             new_lesson = input("Enter a new lesson: ")
             lesson_list[number] = new_lesson + '\n'
@@ -67,7 +67,7 @@ while True:
             try:
                 number = int(user_decision[8:])
 
-                lesson_list = get_lesson('lesson_learn.txt')
+                lesson_list = get_lesson()
 
                 lesson_to_remove = lesson_list[number - 1].strip("\n")
                 removed = lesson_list.pop(number - 1) # removes the number selected

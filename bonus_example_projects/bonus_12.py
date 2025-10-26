@@ -6,7 +6,7 @@ def convert(feet_inches):
     inch = float(split_convert[1])
 
     meters = feet * 0.3048 + inch * 0.0254
-    return meters 
+    return meters
 
 result = convert(feet_inches)
 
