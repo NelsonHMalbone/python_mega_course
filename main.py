@@ -8,7 +8,11 @@ prompt_user_text1 = "Would you like to add, show, edit, complete, exit (select o
 
 # to read files
 # when calling this function will need a variable because it returns something
-def get_lesson(filepath="lesson_learn.txt"):# willl use the filepath that is show in add,show, and edit
+def get_lesson(filepath="lesson_learn.txt"):
+    """read a text file i n return the
+    list of lesson items
+    """
+    # will use the filepath that is show in add,show, and edit
     with open(filepath, 'r') as file_local:
         # equal to writeline but just reading
         lesson_list_local = file_local.readlines()  # list was created here
