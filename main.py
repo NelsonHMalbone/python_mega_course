@@ -1,3 +1,5 @@
+from utils import get_lesson, write_lesson
+
 print("Lessons Learn Tracker")
 # Prompts for project
 prompt_user_text = "Enter your lesson Learned: " # variable to store message
@@ -8,22 +10,6 @@ prompt_user_text1 = "Would you like to add, show, edit, complete, exit (select o
 
 # to read files
 # when calling this function will need a variable because it returns something
-def get_lesson(filepath="lesson_learn.txt"):
-    """read a text file i n return the
-    list of lesson items
-    """
-    # will use the filepath that is show in add,show, and edit
-    with open(filepath, 'r') as file_local:
-        # equal to writeline but just reading
-        lesson_list_local = file_local.readlines()  # list was created here
-    return lesson_list_local
-
-# to write to files
-# does not need a variable to be called unlike the get lesson
-def write_lesson(lesson_arg, filepath="lesson_learn.txt"):
-    """write a lesson item list in the text file"""
-    with open(filepath, 'w') as file_local:
-        file_local.writelines(lesson_arg)
 
 while True:
     user_decision = input(prompt_user_text1).strip()
