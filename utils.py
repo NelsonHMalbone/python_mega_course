@@ -14,3 +14,6 @@ def write_lesson(lesson_arg, filepath="lesson_learn.txt"):
     """write a lesson item list in the text file"""
     with open(filepath, 'w') as file_local:
         file_local.writelines(lesson_arg)
+
+if __name__ == "__main__":
+    print()
