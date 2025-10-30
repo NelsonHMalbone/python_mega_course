@@ -154,3 +154,22 @@ section is improving the way to read files we go from this
 section 8 bonus example is a daily journal
 requirements: Date, rate mood 1-10, Let the thoughts flow
 will go into a folder, and file saved by the date of entry
+
+DATE TIME STRFTIME() FORMATS
+Common strftime() format codes:
+%Y: Year with century (e.g., 2025)
+%m: Month as a zero-padded decimal number (01-12)
+%d: Day of the month as a zero-padded decimal number (01-31)
+%H: Hour (24-hour clock) as a zero-padded decimal number (00-23)
+%I: Hour (12-hour clock) as a zero-padded decimal number (01-12)
+%M: Minute as a zero-padded decimal number (00-59)
+%S: Second as a zero-padded decimal number (00-59)
+%f: Microsecond as a zero-padded decimal number (000000-999999)
+%p: Locale's equivalent of AM or PM
+%A: Full weekday name (e.g., Thursday)
+%B: Full month name (e.g., October)
+%c: Locale's appropriate date and time representation
+%x: Locale's appropriate date representation
+%X: Locale's appropriate time representation
+%z: UTC offset in the form +HHMM or -HHMM
+%Z: Time zone name (e.g., PDT)

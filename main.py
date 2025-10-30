@@ -1,5 +1,8 @@
 from utils import get_lesson, write_lesson
+from datetime import datetime
 
+now = datetime.now()
+print(now.strftime("Todays Date: %m/%d/%Y, The time is %H:%M"))
 print("Lessons Learn Tracker")
 # Prompts for project
 prompt_user_text = "Enter your lesson Learned: " # variable to store message
