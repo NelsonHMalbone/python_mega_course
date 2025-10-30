@@ -1,4 +1,6 @@
-def get_lesson(filepath="lesson_learn.txt"):
+FILEPATH = "lesson_learn.txt"
+
+def get_lesson(filepath=FILEPATH):
     """read a text file i n return the
     list of lesson items
     """
@@ -10,7 +12,7 @@ def get_lesson(filepath="lesson_learn.txt"):
 
 # to write to files
 # does not need a variable to be called unlike the get lesson
-def write_lesson(lesson_arg, filepath="lesson_learn.txt"):
+def write_lesson(lesson_arg, filepath=FILEPATH):
     """write a lesson item list in the text file"""
     with open(filepath, 'w') as file_local:
         file_local.writelines(lesson_arg)
