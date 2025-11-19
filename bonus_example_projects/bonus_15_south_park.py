@@ -10,3 +10,7 @@ for question in data:
     print(question["questions_text"])
     for index, alt in enumerate(question["alternatives"]):
         print(index + 1, ":", alt)
+
+    # allowing the user to choose the answer
+    # needs to be a int user is choicing a numbers
+    user_choice = int(input("Enter your answer: "))
