@@ -1,4 +1,4 @@
-FILEPATH = "lesson_learn.txt"
+FILEPATH = "apps/app_1/lesson_learn.txt"
 
 def get_lesson(filepath=FILEPATH):
     """read a text file i n return the
