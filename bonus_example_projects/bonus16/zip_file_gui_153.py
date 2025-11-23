@@ -7,7 +7,7 @@ text_2 = sg.Text("Select destination folder: ")
 input_1 = sg.Input()
 input_2 = sg.Input()
 file_selector_1 = sg.FilesBrowse("Choose")
-file_selector_2 = sg.FilesBrowse("Choose")
+file_selector_2 = sg.FolderBrowse("Choose")
 compress_btn = sg.Button("Compress")
 
 
