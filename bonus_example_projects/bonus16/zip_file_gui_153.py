@@ -11,8 +11,9 @@ file_selector_2 = sg.FolderBrowse("Choose")
 compress_btn = sg.Button("Compress")
 
 
-main_window = sg.Window("File Zipper", layout=[[text_1,input_1 ,file_selector_1],
-                                               [text_2, input_2, file_selector_2],
-                                               [compress_btn]])
+main_window = sg.Window("File Zipper",
+                        layout=[[text_1, input_1 ,file_selector_1],
+                                [text_2, input_2, file_selector_2],
+                                [compress_btn]])
 main_window.read()
 main_window.close()
