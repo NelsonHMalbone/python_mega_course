@@ -1,4 +1,5 @@
-FILEPATH = "apps/app_1/lesson_learn.txt"
+FILEPATH = "lesson_learn.txt" # for gui
+# FILEPATH = "apps/lesson_learn.txt" # for cli
 
 def get_lesson(filepath=FILEPATH):
     """read a text file i n return the

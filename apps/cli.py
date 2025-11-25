@@ -1,4 +1,4 @@
-from utils import get_lesson, write_lesson
+from apps.utils import get_lesson, write_lesson
 from datetime import datetime
 
 now = datetime.now()

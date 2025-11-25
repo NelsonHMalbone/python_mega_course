@@ -10,3 +10,9 @@ new lesson
 just a new function to write to file
 no file path
 new file
+test does this work
+changes location
+why does the cli work but not my GUI!!!
+test
+from cli
+run from gui
