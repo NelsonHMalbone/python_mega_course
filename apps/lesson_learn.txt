@@ -16,3 +16,4 @@ why does the cli work but not my GUI!!!
 test
 from cli
 run from gui
+the lesson of the day is gui does not like the folder
