@@ -5,9 +5,10 @@ label = sg.Text("Type in a lesson: ")
 input_box = sg.InputText(tooltip="Enter lesson", key="lesson_key")
 button_input = sg.Button("Enter")
 quit_button = sg.Button("Quit")
+edit_button = sg.Button("Edit")
 
 window = sg.Window("My lessons List",
-                   layout=[[label, input_box],[quit_button, button_input]],
+                   layout=[[label, input_box],[quit_button, button_input, edit_button]],
                    font=('Helvetica', 15))
 # prevent program from closing when pushing the enter button
 
