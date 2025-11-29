@@ -24,5 +24,4 @@ while True:
 
         case "Quit":
             break
-
 window.close()
