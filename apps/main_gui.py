@@ -23,6 +23,10 @@ while True:
             lesson_list.append(new_lessons)
             write_lesson(lesson_list)
 
+        # prevents a error message when closing out app before you get the "quit" button to work
+        #case sg.WIN_CLOSED:
+            #break
+
         case "Quit":
             break
 window.close()
