@@ -15,3 +15,6 @@ test
 from cli
 run from gui
 the lesson of the day is gui does not like the folder
+newest lesson
+newest updated lesson
+newest lesson to be added to lesson  box

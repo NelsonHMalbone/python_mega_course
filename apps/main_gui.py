@@ -29,6 +29,7 @@ while True:
             new_lessons = values["lesson_key"] + "\n"
             lesson_list.append(new_lessons)
             write_lesson(lesson_list)
+            window['lesson_box'].update(values=lesson_list)
 
         case "Edit":
             # getting lesson user selected 0 is to get the string
@@ -43,6 +44,10 @@ while True:
 
             # to update list box in real time
             window['lesson_box'].update(values=lessons)
+
+        case 'lesson_box':
+            #update current selection into input text box
+            window["lesson_key"].update(value=values["lesson_box"][0])
 
         # prevents a error message when closing out app before you get the "quit" button to work
         #case sg.WIN_CLOSED:
