@@ -1,13 +1,15 @@
 # 11-22 making the gui of the file zipper
 
 import FreeSimpleGUI as sg
+import zip_creator
+from bonus_example_projects.bonus16.zip_creator import make_archive
 
 text_1 = sg.Text("Select files to compress: ")
 text_2 = sg.Text("Select destination folder: ")
 input_1 = sg.Input()
 input_2 = sg.Input()
-file_selector_1 = sg.FilesBrowse("Choose")
-file_selector_2 = sg.FolderBrowse("Choose")
+file_selector_1 = sg.FilesBrowse("Choose", key='files')
+file_selector_2 = sg.FolderBrowse("Choose", key="folders")
 compress_btn = sg.Button("Compress")
 
 
@@ -15,5 +17,13 @@ main_window = sg.Window("File Zipper",
                         layout=[[text_1, input_1 ,file_selector_1],
                                 [text_2, input_2, file_selector_2],
                                 [compress_btn]])
+
+while True:
+    event, values = main_window.read()
+    print(event, values)
+    filepaths = values["files"].split(";")
+    folder = values["folders"]
+    make_archive(filepaths,folder)
+
 main_window.read()
 main_window.close()
