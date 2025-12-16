@@ -12,9 +12,7 @@ why does the cli work but not my GUI!!!
 test
 from cli
 run from gui
-the lesson of the day is gui does not like the folder
 newest lesson
-newest updated lessonadd new lessons froms treamlitadd new lessons from streamlit
-new lesson with new line
 new lesson with another new line
 streramlit web app
+updated with rerun instead of experimental rerun
