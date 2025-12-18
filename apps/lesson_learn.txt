@@ -1,9 +1,4 @@
 real time update will this work
-Fix the bug
-how did this work now?
-just place a upper
-new lesson
-just a new function to write to file
 no file path
 new file
 test does this work

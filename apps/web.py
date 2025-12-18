@@ -14,6 +14,10 @@ def add_value_lesson():
 
 st.title("My Todo Web App")
 st.write("This app is to increase productivity")
+st.text_input(label= "Enter a new lesson: ",
+              on_change=add_value_lesson,
+              key="new_lessons"
+              )
 
 for index, lesson in enumerate(lessons):
     checkbox = st.checkbox(lesson, key=lesson)
@@ -22,8 +26,3 @@ for index, lesson in enumerate(lessons):
         utils.write_lesson(lessons)
         del st.session_state[lesson]
         st.rerun() # needed for checkboxes
-
-st.text_input(label= "Enter a new lesson: ",
-              on_change=add_value_lesson,
-              key="new_lessons"
-              )
